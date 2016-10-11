@@ -1,0 +1,21 @@
+script(type="text/ng-template" id="weather.html")
+    div(ng-include="'partials/weather.html'")
+
+script(type="text/ng-template" id="home.html")
+    div Waiting for approval...
+
+script(type="text/ng-template" id="ask.html")
+    div.form-group
+        div.alert.alert-danger(ng-if="error.message")
+            p {{ error.message }}
+        form(ng-submit="applyCoordinates()")
+            h4 Enter the Coordinates
+            div
+                label Zip
+                input(type="text" ng-model="location.zip" ).form-control
+            div
+                label Country
+                input(type="text" ng-model="location.country" ).form-control
+            br
+            div
+                input(type="submit" value="Submit" ).btn.btn-primary

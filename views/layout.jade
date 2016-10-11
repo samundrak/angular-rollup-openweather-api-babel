@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body(ng-app="app")
+        .row
+            nav.navbar.navbar-default
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand(ui-sref="home") GEO API
+        .row.col-lg-offset-2.col-lg-8.jumbotron
+            ui-view
+
+
+        include templates
+        script(src="javascripts/app.js")
