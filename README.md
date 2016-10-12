@@ -1,2 +1,10 @@
-# angular-rollup-openweather-api-babel
-Angular rollup openweather api with es6 babel
+# OpenWeather API with Angular 1.x , Rollup, Babel 
+   An example code to fetch weather from openweather api
+   using angular.
+   
+   
+#Install
+   - `npm i`
+   - `bower install`
+   - `npm start`
+   - Goto http://localhost:3000
