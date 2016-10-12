@@ -66,11 +66,11 @@ export default function () {
                 });
             },
             isTimeUp(){
-                if ($scope.forecast && $scope.forecast.updated - Date.now() <= (10 * 60 * 1000)) {
-                    return false;
+                if ($scope.forecast && (Date.now() - $scope.forecast.updated ) > (10 * 60 * 1000)) {
+                    return true;
                 }
 
-                return true;
+                return false;
             }
         });
 

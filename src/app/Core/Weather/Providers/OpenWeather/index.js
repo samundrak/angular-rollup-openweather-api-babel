@@ -8,7 +8,6 @@ weatherProvider.extend({
     },
 
     getWeather(location){
-        console.log(this)
         return this.$http.get(this.buildApi(location));
     },
 
@@ -18,12 +17,10 @@ weatherProvider.extend({
             api += `lat=${location.latitude}&lon=${location.longitude}&`;
         }
 
-        if (location.zip) {
-            api += `zip=${location.zip}&`;
-        }
-
-        if (location.country) {
-            api += `country=${location.country}&`;
+        if (location.zip || location.country) {
+            location.zip = location.zip || '';
+            location.country = location.country || '';
+            api += `zip=${location.zip},${location.country}&`;
         }
 
         return `${this.api}${api}appid=${this.apiKey}`;
