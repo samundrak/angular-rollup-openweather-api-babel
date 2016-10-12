@@ -8,3 +8,6 @@
    - `bower install`
    - `npm start`
    - Goto http://localhost:3000
+
+#Demo
+   [Demo](https://openweatherz.herokuapp.com/) on Heroku
