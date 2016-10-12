@@ -57,5 +57,4 @@ app.use(function (err, req, res, next) {
     });
 });
 
-process.env.PORT = process.argv[2] || 3000;
 module.exports = app;

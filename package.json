@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "post-install": "bower install",
+    "postinstall": "bower install",
     "start": "node ./bin/www 3000",
     "dev": "npm run rollup",
     "roll": "rollup -c "
